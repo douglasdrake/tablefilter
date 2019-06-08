@@ -1,3 +1,4 @@
+// Douglas Drake
 // from data.js
 var tableData = data;
 
@@ -12,8 +13,6 @@ data.forEach((tableData) => {
     });
   });
 
-// console.log("Made it to this point");
-
 // Select the submit button
 var submit = d3.select("#filter-btn");
 
@@ -21,8 +20,6 @@ console.log(submit);
 
 submit.on("click", function() {
   d3.event.preventDefault();
-
-  // console.log("A click");
 
   // Select the input element and get the raw HTML node
   var dateElement = d3.select("#datetime");
@@ -38,7 +35,8 @@ submit.on("click", function() {
   var inputCountry = countryElement.property("value").toLowerCase();
   var inputCity = cityElement.property("value").toLowerCase();
 
-  // console.log(inputShape);
+  /* A useful extension would be to allow the user to filter with OR
+  and to leave some fields blank.  */
 
   var filteredData = tableData.filter(function(sighting) {
     return sighting.shape === inputShape &&
@@ -62,13 +60,5 @@ submit.on("click", function() {
   });
 
   console.log(filteredData);
-
-  // Then, select the unordered list element by class name
-  var list = d3.select(".summary");
-
-  // remove any children from the list to
-  list.html("");
-
-
 
 });
