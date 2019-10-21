@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Douglas Drake Homework - Using the starter code html.  The results are filtered on multiple conditions -->
+<!-- Douglas Drake.  The results are filtered on multiple conditions -->
 
 <head>
   <meta charset="utf-8">
@@ -32,31 +32,35 @@
         <div class="col-md-2">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
+              <div class="panel-heading">Filter Search
+                  <p>Seperate multiple entries with a comma.</p> <p>  Blank entries are ignored.</p>
+
+              </div>
               <div class="panel-body">
+                
                 <form>
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/1/2010">
+                        <label for="date">Enter Dates</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="1/1/2010, 1/2/2010">
                       </li>
                       <li class="filter list-group-item">
-                          <label for="state">Enter a Country</label>
+                          <label for="state">Enter Countries</label>
                           <input class="form-control" id="country" type="text" placeholder="US">
                       </li>
                       <li class="filter list-group-item">
-                          <label for="state">Enter a State</label>
-                          <input class="form-control" id="state" type="text" placeholder="CA">
+                          <label for="state">Enter States</label>
+                          <input class="form-control" id="state" type="text" placeholder="CA, TX">
                       </li>
                       <li class="filter list-group-item">
-                        <label for="state">Enter a City</label>
+                        <label for="state">Enter Cities</label>
                         <input class="form-control" id="city" type="text" placeholder="Fresno">
                     </li>
 
                       <li class="filter list-group-item">
-                        <label for="shape">Enter a Shape</label>
-                        <input class="form-control" id="shape" type="text" placeholder="light">
+                        <label for="shape">Enter Shapes</label>
+                        <input class="form-control" id="shape" type="text" placeholder="light, sphere">
                       </li>
                       
                     </ul>
@@ -74,6 +78,7 @@
         
         <div class="col-md-10">
             <h3>Results</h3>
+            <p id="filter-state"></p>
             <div id="table-area" class="">
                 <table id="filter-table-head" class="table table-striped">
                   <thead>
